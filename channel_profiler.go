@@ -14,11 +14,9 @@ type ChannelProfiler struct {
 	stopped bool
 }
 
-func NewChannelProfiler(
-	channels ...*ChannelData,
-) *ChannelProfiler {
+func NewChannelProfiler() *ChannelProfiler {
 	self := &ChannelProfiler{
-		channels:      channels,
+		channels:      make([]*ChannelData, 0),
 		sampleSleepMS: DefaultSampleRateMS,
 
 		running: false,
