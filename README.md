@@ -3,6 +3,7 @@
 
 ## Install
 
+Get the latest tag:
 `go get github.com/kuche1/channelprofiler`
 
 Or if you want a specific tag:

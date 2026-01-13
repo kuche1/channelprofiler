@@ -33,7 +33,7 @@ func (self *ChannelProfiler) SetSampleSleepMS(value int) {
 }
 
 func (self *ChannelProfiler) AddChannels(channels ...*ChannelData) {
-	self.channels = append(self.channels, channels...) // TODO: is this going to mess with `range` ?
+	self.channels = append(self.channels, channels...) // TODO: is this going to mess with `range` if it gets called after `Start` ?
 }
 
 func (self *ChannelProfiler) Start() {
@@ -79,7 +79,7 @@ func (self *ChannelProfiler) periodicallyTakeSamples() {
 			}
 
 			if length == channel.capacity {
-				channel.capacity += 1
+				channel.countFull += 1
 			}
 		}
 
