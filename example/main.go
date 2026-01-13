@@ -77,7 +77,4 @@ func main() {
 	fmt.Printf("chanA: 1 item(s)\n")
 	fmt.Printf("chanB: 2 item(s)\n")
 	channelProfiler.PrintResults()
-
-	fmt.Printf("\n")
-	fmt.Printf("------------------------------\n")
 }

@@ -63,6 +63,8 @@ func (self *ChannelProfiler) Stop() {
 }
 
 func (self *ChannelProfiler) StopAndPrintResults() {
+	fmt.Printf("\n")
+	fmt.Printf("------------------------------\n")
 	self.Stop()
 	self.PrintResults()
 }
@@ -94,6 +96,10 @@ func (self *ChannelProfiler) PrintResults() {
 
 	for _, channel := range self.channels {
 		fmt.Printf("    %v:\n", channel.name)
+
+		if len(channel.error) > 0 {
+			fmt.Printf("    ERROR: %v:\n", channel.error)
+		}
 
 		fmt.Printf("        Empty: %6.2f%% | %3v / %3v\n",
 			100*float32(channel.countEmpty)/float32(channel.samples),

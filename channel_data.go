@@ -1,9 +1,13 @@
 package channelprofiler
 
-import "log"
+import (
+	"fmt"
+	"log"
+)
 
 type ChannelData struct {
-	name string
+	name  string
+	error string
 
 	getLength func() int
 	capacity  int
@@ -14,12 +18,16 @@ type ChannelData struct {
 }
 
 func NewChannelData(name string, getLength func() int, capacity int) *ChannelData {
+	error_ := ""
+
 	if capacity <= 0 {
-		log.Printf("Channel `%v`: Cannot profile a channel with capacity <=0 (in this case %v)", name, capacity)
+		error_ = fmt.Sprintf("Cannot profile a channel with capacity <=0 (in this case %v)", capacity)
+		log.Printf("Channel `%v`: %v", name, error_)
 	}
 
 	return &ChannelData{
-		name: name,
+		name:  name,
+		error: error_,
 
 		getLength: getLength,
 		capacity:  capacity,
