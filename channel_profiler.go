@@ -37,7 +37,7 @@ func (self *ChannelProfiler) AddChannels(channels ...*ChannelData) {
 }
 
 func (self *ChannelProfiler) Start() {
-	if self.running {
+	if !self.running {
 		log.Printf("Channel profiler is already runnung")
 		return
 	}
