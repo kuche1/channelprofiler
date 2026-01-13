@@ -98,7 +98,7 @@ func (self *ChannelProfiler) PrintResults() {
 		fmt.Printf("    %v:\n", channel.name)
 
 		if len(channel.error) > 0 {
-			fmt.Printf("        ERROR: %v:\n", channel.error)
+			fmt.Printf("        ERROR: %v\n", channel.error)
 		}
 
 		fmt.Printf("        Empty: %6.2f%% | %3v / %3v\n",
