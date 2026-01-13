@@ -8,3 +8,5 @@ github.com/kuche1/channelprofiler v0.0.2-0.20260113185557-3dbebdf1e8a0 h1:VrnQdZ
 github.com/kuche1/channelprofiler v0.0.2-0.20260113185557-3dbebdf1e8a0/go.mod h1:gczPIAXSEX7vUFkdDLRQjg45cXQVuScrkb/uj2PQVL0=
 github.com/kuche1/channelprofiler v0.0.2-0.20260113190712-7215244f9c71 h1:jqS/lsSyjee9gx4bMTFgLWMWVAlVW5ZwNSCbeLKNtrA=
 github.com/kuche1/channelprofiler v0.0.2-0.20260113190712-7215244f9c71/go.mod h1:gczPIAXSEX7vUFkdDLRQjg45cXQVuScrkb/uj2PQVL0=
+github.com/kuche1/channelprofiler v0.0.2 h1:sOcD7VnTc94XkADfOhHS5CIAPjJL/k3oUPTBiZsAZkA=
+github.com/kuche1/channelprofiler v0.0.2/go.mod h1:gczPIAXSEX7vUFkdDLRQjg45cXQVuScrkb/uj2PQVL0=
